@@ -6,11 +6,14 @@
 <meta name="robots" content="noindex, nofollow">
 <title>利笙科技 LEDSUN｜餐飲設備 × POS × 成本管理整合服務</title>
 <meta name="description" content="利笙科技協助餐廳整合取餐呼叫器、無線服務鈴、POS 與進銷存 / 成本管理系統，提供系統導入、教育訓練與售後服務。">
+<meta name="theme-color" content="#0B3B2E">
 <link rel="icon" href="assets/img/logo-mark.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&display=swap">
+<link rel="preload" as="image" href="assets/img/hero.webp" fetchpriority="high">
 <link rel="stylesheet" href="assets/css/style.css">
+<script>document.documentElement.classList.add('js');</script>
 </head>
 <body>
 <a class="skip-link" href="#main">跳至主要內容</a>
@@ -68,6 +71,9 @@
 
   <!-- 主視覺 -->
   <section class="hero" aria-labelledby="hero-title">
+    <div class="hero-bg">
+      <img src="assets/img/hero.webp" alt="明亮的餐廳內部用餐區" width="1800" height="1100" fetchpriority="high" decoding="async">
+    </div>
     <div class="container hero-inner">
       <div class="hero-text">
         <h1 id="hero-title">餐飲設備 × POS ×<br>成本管理整合服務</h1>
@@ -77,37 +83,34 @@
           <a class="btn btn-accent" href="#checkup">免費餐廳健檢<span class="arrow" aria-hidden="true">›</span></a>
         </div>
       </div>
-      <div class="hero-media">
-        <div class="ph ph-hero" role="img" aria-label="主視覺產品照（取餐呼叫器、服務鈴、POS）"><span>主視覺產品照<br>待貴公司提供</span></div>
-      </div>
     </div>
   </section>
 
   <!-- 四大服務 -->
   <section class="section services" id="services" aria-labelledby="services-title">
     <div class="container">
-      <h2 class="section-title" id="services-title"><span>我們的四大服務</span></h2>
+      <h2 class="section-title" id="services-title" data-reveal><span>我們的四大服務</span></h2>
       <div class="grid grid-4 services-grid">
-        <article class="card service-card">
-          <div class="ph ph-square" role="img" aria-label="取餐呼叫器產品照"><span>產品照</span></div>
+        <article class="card service-card" data-reveal>
+          <div class="card-media ratio-4x3"><img src="assets/img/svc-pager.webp" alt="候餐區的咖啡廳櫃檯" width="800" height="600" loading="lazy" decoding="async"></div>
           <h3>取餐呼叫器</h3>
           <p>提升取餐效率，減少顧客等待與櫃台呼叫成本。</p>
           <a class="more" href="#">了解更多<span aria-hidden="true">›</span></a>
         </article>
-        <article class="card service-card">
-          <div class="ph ph-square" role="img" aria-label="無線服務鈴產品照"><span>產品照</span></div>
+        <article class="card service-card" data-reveal>
+          <div class="card-media ratio-4x3"><img src="assets/img/svc-bell.webp" alt="餐廳用餐大廳" width="800" height="600" loading="lazy" decoding="async"></div>
           <h3>無線服務鈴</h3>
           <p>防水耐用，操作簡單，適用餐廳、美食街及候餐區。</p>
           <a class="more" href="#">了解更多<span aria-hidden="true">›</span></a>
         </article>
-        <article class="card service-card">
-          <div class="ph ph-square" role="img" aria-label="餐飲進銷存管理系統畫面"><span>系統畫面</span></div>
+        <article class="card service-card" data-reveal>
+          <div class="card-media ratio-4x3"><img src="assets/img/svc-inventory.webp" alt="筆電上的營運報表儀表板" width="800" height="600" loading="lazy" decoding="async"></div>
           <h3>餐飲進銷存管理</h3>
           <p>採購、庫存、成本與報表集中管理，搭配 Costflows 平台。</p>
           <a class="more" href="#">了解更多<span aria-hidden="true">›</span></a>
         </article>
-        <article class="card service-card">
-          <div class="ph ph-square" role="img" aria-label="POS 與設備整合產品照"><span>產品照</span></div>
+        <article class="card service-card" data-reveal>
+          <div class="card-media ratio-4x3"><img src="assets/img/svc-pos.webp" alt="櫃檯以刷卡機與 POS 結帳" width="800" height="600" loading="lazy" decoding="async"></div>
           <h3>POS 與設備整合</h3>
           <p>Eats365 POS 系統、硬體設備整合與安裝支援。</p>
           <a class="more" href="#">了解更多<span aria-hidden="true">›</span></a>
@@ -119,30 +122,30 @@
   <!-- 為什麼選擇利笙 -->
   <section class="section why" aria-labelledby="why-title">
     <div class="container">
-      <h2 class="section-title" id="why-title"><span>為什麼選擇利笙科技？</span></h2>
-      <ul class="why-list">
+      <h2 class="section-title" id="why-title" data-reveal><span>為什麼選擇利笙科技？</span></h2>
+      <ul class="why-list" data-reveal>
         <li>
-          <svg class="why-ico" viewBox="0 0 48 48" aria-hidden="true"><path d="M24 4a14 14 0 0 0-14 14c0 10.5 14 26 14 26s14-15.5 14-26A14 14 0 0 0 24 4Z"/><circle cx="24" cy="18" r="5" fill="#fff"/></svg>
+          <span class="why-ico-wrap"><svg class="why-ico" viewBox="0 0 48 48" aria-hidden="true"><path d="M24 4a14 14 0 0 0-14 14c0 10.5 14 26 14 26s14-15.5 14-26A14 14 0 0 0 24 4Z"/><circle cx="24" cy="18" r="5" fill="#fff"/></svg></span>
           <h3>台灣在地服務</h3>
           <p>快速到府支援<br>售前售後都安心</p>
         </li>
         <li>
-          <svg class="why-ico" viewBox="0 0 48 48" aria-hidden="true"><path d="M42.4 12.2a10 10 0 0 1-13 12.4L13.9 40.1a4 4 0 0 1-5.7-5.7l15.5-15.5a10 10 0 0 1 12.4-13l-5.6 5.6 1.5 5.4 5.4 1.5 5-5.2Z"/></svg>
+          <span class="why-ico-wrap"><svg class="why-ico" viewBox="0 0 48 48" aria-hidden="true"><path d="M42.4 12.2a10 10 0 0 1-13 12.4L13.9 40.1a4 4 0 0 1-5.7-5.7l15.5-15.5a10 10 0 0 1 12.4-13l-5.6 5.6 1.5 5.4 5.4 1.5 5-5.2Z"/></svg></span>
           <h3>專業安裝設定</h3>
           <p>現場勘查與規劃<br>設備與系統一次到位</p>
         </li>
         <li>
-          <svg class="why-ico" viewBox="0 0 48 48" aria-hidden="true"><path d="M24 8 2 18l22 10 18-8.2V32h4V18L24 8Z"/><path d="M10 24.5V33c0 3.3 6.3 6 14 6s14-2.7 14-6v-8.5l-14 6.4-14-6.4Z"/></svg>
+          <span class="why-ico-wrap"><svg class="why-ico" viewBox="0 0 48 48" aria-hidden="true"><path d="M24 8 2 18l22 10 18-8.2V32h4V18L24 8Z"/><path d="M10 24.5V33c0 3.3 6.3 6 14 6s14-2.7 14-6v-8.5l-14 6.4-14-6.4Z"/></svg></span>
           <h3>教育訓練完整</h3>
           <p>系統操作、流程建立<br>提升團隊使用效率</p>
         </li>
         <li>
-          <svg class="why-ico" viewBox="0 0 48 48" aria-hidden="true"><circle cx="24" cy="10" r="5"/><circle cx="10" cy="36" r="5"/><circle cx="38" cy="36" r="5"/><path d="M22.5 14.5 12 31.5l2.6 1.6L25 16.4l-2.5-1.9Zm3 0-2.5 1.9L33.4 33l2.6-1.6-10.5-17Z"/></svg>
+          <span class="why-ico-wrap"><svg class="why-ico" viewBox="0 0 48 48" aria-hidden="true"><circle cx="24" cy="10" r="5"/><circle cx="10" cy="36" r="5"/><circle cx="38" cy="36" r="5"/><path d="M22.5 14.5 12 31.5l2.6 1.6L25 16.4l-2.5-1.9Zm3 0-2.5 1.9L33.4 33l2.6-1.6-10.5-17Z"/></svg></span>
           <h3>系統整合能力</h3>
           <p>POS、進銷存與硬體整合<br>打造完整解決方案</p>
         </li>
         <li>
-          <svg class="why-ico" viewBox="0 0 48 48" aria-hidden="true"><path d="M24 4 6 11v12c0 10.6 7.7 18.9 18 21 10.3-2.1 18-10.4 18-21V11L24 4Z"/><path d="m21.5 30-6-6 2.8-2.8 3.2 3.2 8.2-8.2 2.8 2.8L21.5 30Z" fill="#fff"/></svg>
+          <span class="why-ico-wrap"><svg class="why-ico" viewBox="0 0 48 48" aria-hidden="true"><path d="M24 4 6 11v12c0 10.6 7.7 18.9 18 21 10.3-2.1 18-10.4 18-21V11L24 4Z"/><path d="m21.5 30-6-6 2.8-2.8 3.2 3.2 8.2-8.2 2.8 2.8L21.5 30Z" fill="#fff"/></svg></span>
           <h3>售後維修保障</h3>
           <p>原廠與代理雙重支援<br>備品充足好安心</p>
         </li>
@@ -153,70 +156,70 @@
   <!-- 影音中心 -->
   <section class="section videos" id="videos" aria-labelledby="videos-title">
     <div class="container">
-      <div class="section-head">
+      <div class="section-head" data-reveal>
         <h2 class="section-title" id="videos-title"><span>利笙影音中心</span></h2>
         <a class="btn btn-outline btn-sm" href="#">查看更多影片<span aria-hidden="true">›</span></a>
       </div>
 
       <div class="carousel" data-carousel>
         <div class="carousel-track grid grid-4 video-grid">
-          <article class="video-card">
+          <article class="video-card" data-reveal>
             <a class="video-thumb" href="#" aria-label="播放：無線服務鈴介紹">
-              <div class="ph ph-video"><span>影片縮圖</span></div>
+              <img src="assets/img/vid-bell.webp" alt="" width="800" height="450" loading="lazy" decoding="async">
               <span class="play" aria-hidden="true"></span>
               <span class="duration">0:36</span>
             </a>
             <h3>無線服務鈴介紹</h3>
             <p>實際操作示範，快速了解服務鈴的功能與使用方式。</p>
           </article>
-          <article class="video-card">
+          <article class="video-card" data-reveal>
             <a class="video-thumb" href="#" aria-label="播放：取餐呼叫器介紹">
-              <div class="ph ph-video"><span>影片縮圖</span></div>
+              <img src="assets/img/vid-pager.webp" alt="" width="800" height="450" loading="lazy" decoding="async">
               <span class="play" aria-hidden="true"></span>
               <span class="duration">0:40</span>
             </a>
             <h3>取餐呼叫器介紹</h3>
             <p>提升取餐效率，改善顧客體驗與翻桌率。</p>
           </article>
-          <article class="video-card">
+          <article class="video-card" data-reveal>
             <a class="video-thumb" href="#" aria-label="播放：POS 系統介紹">
-              <div class="ph ph-video"><span>影片縮圖</span></div>
+              <img src="assets/img/vid-pos.webp" alt="" width="800" height="450" loading="lazy" decoding="async">
               <span class="play" aria-hidden="true"></span>
               <span class="duration">0:45</span>
             </a>
             <h3>POS 系統介紹</h3>
             <p>Eats365 POS 系統操作簡介，功能完整、操作簡單。</p>
           </article>
-          <article class="video-card">
+          <article class="video-card" data-reveal>
             <a class="video-thumb" href="#" aria-label="播放：Costflows 系統示範">
-              <div class="ph ph-video"><span>影片縮圖</span></div>
+              <img src="assets/img/vid-costflows.webp" alt="" width="800" height="450" loading="lazy" decoding="async">
               <span class="play" aria-hidden="true"></span>
               <span class="duration">0:52</span>
             </a>
             <h3>Costflows 系統示範</h3>
             <p>進銷存 / 成本管理示範，讓管理更簡單有效率。</p>
           </article>
-          <article class="video-card">
+          <article class="video-card" data-reveal>
             <a class="video-thumb" href="#" aria-label="播放：安裝教學">
-              <div class="ph ph-video"><span>影片縮圖</span></div>
+              <img src="assets/img/vid-install.webp" alt="" width="800" height="450" loading="lazy" decoding="async">
               <span class="play" aria-hidden="true"></span>
               <span class="duration">0:41</span>
             </a>
             <h3>安裝教學</h3>
             <p>設備安裝與配對教學，快速上手不求人。</p>
           </article>
-          <article class="video-card">
+          <article class="video-card" data-reveal>
             <a class="video-thumb" href="#" aria-label="播放：設定教學">
-              <div class="ph ph-video"><span>影片縮圖</span></div>
+              <img src="assets/img/vid-setup.webp" alt="" width="800" height="450" loading="lazy" decoding="async">
               <span class="play" aria-hidden="true"></span>
               <span class="duration">0:35</span>
             </a>
             <h3>設定教學</h3>
             <p>各項功能設定與操作，輕鬆掌握系統運用。</p>
           </article>
-          <article class="video-card">
+          <article class="video-card" data-reveal>
             <a class="video-thumb" href="#" aria-label="播放：客戶案例分享">
-              <div class="ph ph-video"><span>影片縮圖</span></div>
+              <img src="assets/img/vid-case.webp" alt="" width="800" height="450" loading="lazy" decoding="async">
               <span class="play" aria-hidden="true"></span>
               <span class="duration">0:48</span>
             </a>
@@ -232,7 +235,7 @@
   <!-- 免費餐廳健檢 -->
   <section class="section checkup" id="checkup" aria-labelledby="checkup-title">
     <div class="container">
-      <div class="checkup-box">
+      <div class="checkup-box" data-reveal>
         <div class="checkup-text">
           <h2 id="checkup-title">免費餐廳健檢</h2>
           <p class="lead">專業顧問一對一分析，找出營運改善關鍵</p>
@@ -247,7 +250,7 @@
           <a class="btn btn-accent" href="#">立即預約健檢<span class="arrow" aria-hidden="true">›</span></a>
         </div>
         <div class="checkup-media">
-          <div class="ph ph-checkup" role="img" aria-label="顧問分析報表情境照"><span>情境照<br>待貴公司提供</span></div>
+          <img src="assets/img/checkup.webp" alt="顧問在筆電旁手寫營運分析" width="1000" height="750" loading="lazy" decoding="async">
         </div>
       </div>
     </div>
@@ -256,35 +259,43 @@
   <!-- 成功案例 -->
   <section class="section cases" id="cases" aria-labelledby="cases-title">
     <div class="container">
-      <div class="section-head">
+      <div class="section-head" data-reveal>
         <h2 class="section-title" id="cases-title"><span>成功案例</span></h2>
         <a class="btn btn-outline btn-sm" href="#">查看更多案例<span aria-hidden="true">›</span></a>
       </div>
       <div class="carousel" data-carousel>
         <div class="carousel-track grid grid-4 case-grid">
-          <article class="card case-card">
-            <div class="ph ph-wide" role="img" aria-label="美食街案例照"><span>案例照</span></div>
-            <h3>美食街導入取餐呼叫器</h3>
-            <p>減少顧客等待時間，提升整體用餐體驗</p>
-            <a class="more" href="#">了解更多<span aria-hidden="true">›</span></a>
+          <article class="card case-card" data-reveal>
+            <div class="card-media ratio-16x9"><img src="assets/img/case-foodcourt.webp" alt="美食街用餐情境" width="800" height="450" loading="lazy" decoding="async"></div>
+            <div class="card-body">
+              <h3>美食街導入取餐呼叫器</h3>
+              <p>減少顧客等待時間，提升整體用餐體驗</p>
+              <a class="more" href="#">了解更多<span aria-hidden="true">›</span></a>
+            </div>
           </article>
-          <article class="card case-card">
-            <div class="ph ph-wide" role="img" aria-label="連鎖餐廳案例照"><span>案例照</span></div>
-            <h3>連鎖餐廳導入服務鈴</h3>
-            <p>服務效率提升，翻桌率增加 20%</p>
-            <a class="more" href="#">了解更多<span aria-hidden="true">›</span></a>
+          <article class="card case-card" data-reveal>
+            <div class="card-media ratio-16x9"><img src="assets/img/case-chain.webp" alt="連鎖餐廳用餐區" width="800" height="450" loading="lazy" decoding="async"></div>
+            <div class="card-body">
+              <h3>連鎖餐廳導入服務鈴</h3>
+              <p>服務效率提升，翻桌率增加 20%</p>
+              <a class="more" href="#">了解更多<span aria-hidden="true">›</span></a>
+            </div>
           </article>
-          <article class="card case-card">
-            <div class="ph ph-wide" role="img" aria-label="餐廳 POS 案例照"><span>案例照</span></div>
-            <h3>餐廳導入 POS 系統</h3>
-            <p>結帳更快速，營運報表更清楚</p>
-            <a class="more" href="#">了解更多<span aria-hidden="true">›</span></a>
+          <article class="card case-card" data-reveal>
+            <div class="card-media ratio-16x9"><img src="assets/img/case-pos.webp" alt="餐廳露台用餐區" width="800" height="450" loading="lazy" decoding="async"></div>
+            <div class="card-body">
+              <h3>餐廳導入 POS 系統</h3>
+              <p>結帳更快速，營運報表更清楚</p>
+              <a class="more" href="#">了解更多<span aria-hidden="true">›</span></a>
+            </div>
           </article>
-          <article class="card case-card">
-            <div class="ph ph-wide" role="img" aria-label="中央廚房案例照"><span>案例照</span></div>
-            <h3>中央廚房導入成本管理</h3>
-            <p>成本精準控管，毛利提升 15%</p>
-            <a class="more" href="#">了解更多<span aria-hidden="true">›</span></a>
+          <article class="card case-card" data-reveal>
+            <div class="card-media ratio-16x9"><img src="assets/img/case-kitchen.webp" alt="廚房備料作業" width="800" height="450" loading="lazy" decoding="async"></div>
+            <div class="card-body">
+              <h3>中央廚房導入成本管理</h3>
+              <p>成本精準控管，毛利提升 15%</p>
+              <a class="more" href="#">了解更多<span aria-hidden="true">›</span></a>
+            </div>
           </article>
         </div>
         <div class="carousel-dots" role="tablist" aria-label="案例分頁"></div>
@@ -295,30 +306,30 @@
   <!-- 最新文章 -->
   <section class="section articles" id="articles" aria-labelledby="articles-title">
     <div class="container">
-      <div class="section-head">
+      <div class="section-head" data-reveal>
         <h2 class="section-title" id="articles-title"><span>最新文章</span></h2>
         <a class="btn btn-outline btn-sm" href="#">查看更多文章<span aria-hidden="true">›</span></a>
       </div>
       <div class="grid grid-4 article-grid">
-        <article class="card article-card">
+        <article class="card article-card" data-reveal>
           <time datetime="2024-05-20">2024-05-20</time>
           <h3><a href="#">如何挑選適合的無線服務鈴？</a></h3>
           <p>從距離、功能、使用需求，教你挑選最適合餐廳的服務鈴。</p>
           <a class="more" href="#">閱讀更多<span aria-hidden="true">›</span></a>
         </article>
-        <article class="card article-card">
+        <article class="card article-card" data-reveal>
           <time datetime="2024-05-15">2024-05-15</time>
           <h3><a href="#">POS 系統選擇重點解析</a></h3>
           <p>不同餐廳適合的 POS 系統，一次告訴你怎麼選。</p>
           <a class="more" href="#">閱讀更多<span aria-hidden="true">›</span></a>
         </article>
-        <article class="card article-card">
+        <article class="card article-card" data-reveal>
           <time datetime="2024-05-10">2024-05-10</time>
           <h3><a href="#">Costflows 如何降低餐廳成本？</a></h3>
           <p>進銷存整合、食材成本分析，有效降低營運成本。</p>
           <a class="more" href="#">閱讀更多<span aria-hidden="true">›</span></a>
         </article>
-        <article class="card article-card">
+        <article class="card article-card" data-reveal>
           <time datetime="2024-05-05">2024-05-05</time>
           <h3><a href="#">中央廚房管理的 5 大重點</a></h3>
           <p>提升效率與品質，中央廚房管理必學技巧。</p>
@@ -331,8 +342,8 @@
   <!-- 合作夥伴 -->
   <section class="section partners" aria-labelledby="partners-title">
     <div class="container">
-      <h2 class="section-title" id="partners-title"><span>合作夥伴</span></h2>
-      <ul class="partner-list">
+      <h2 class="section-title" id="partners-title" data-reveal><span>合作夥伴</span></h2>
+      <ul class="partner-list" data-reveal>
         <li>Costflows</li>
         <li>Eats365</li>
         <li>FEC</li>
