@@ -274,8 +274,9 @@ button { font: inherit; color: inherit; background: none; border: 0; padding: 0;
    -------------------------------------------------------------------------- */
 .site-footer { background: var(--green-deep); color: #fff; }
 .footer-grid { display: grid; grid-template-columns: 1.3fr 1fr 1fr; gap: 40px; padding-block: 56px 40px; }
-.footer-logo { width: 160px; height: 58px; }
-.footer-brand p { margin-top: 18px; font-size: 14px; line-height: 1.8; color: rgba(255, 255, 255, .8); max-width: 30em; }
+.footer-logo { width: 176px; height: 41px; }
+.footer-company { margin-top: 14px; font-size: 18px; font-weight: 700; letter-spacing: .06em; color: #fff; }
+.footer-brand .footer-desc { margin-top: 12px; font-size: 14px; line-height: 1.8; color: rgba(255, 255, 255, .8); max-width: 30em; }
 .footer-col h3 { font-size: 16px; font-weight: 700; margin-bottom: 12px; }
 .footer-col p { font-size: 14px; line-height: 1.9; color: rgba(255, 255, 255, .8); }
 .contact-list li { display: flex; align-items: flex-start; gap: 10px; font-size: 15px; margin-bottom: 12px; }
@@ -383,7 +384,8 @@ button { font: inherit; color: inherit; background: none; border: 0; padding: 0;
   .service-card .more { margin-top: 8px; }
 
   .why-list { grid-template-columns: 1fr; }
-  .why-list li { display: flex; align-items: center; gap: 16px; text-align: left; padding: 14px 18px; border-left: 0; border-top: 1px solid var(--line); }
+  .why-list li { display: flex; align-items: center; gap: 16px; text-align: left; padding: 14px 18px; border-left: 0; }
+  .why-list li:nth-child(n + 2) { border-top: 1px solid var(--line); }
   .why-list li:first-child { border-top: 0; }
   .why-ico-wrap { width: 44px; height: 44px; margin: 0; flex: 0 0 auto; }
   .why-ico { width: 22px; height: 22px; }
@@ -413,9 +415,12 @@ button { font: inherit; color: inherit; background: none; border: 0; padding: 0;
 
   .partners { padding-block: 28px 48px; }
   .partner-list { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-  .partner-list li { min-height: 64px; font-size: 17px; border-top: 1px solid var(--line); }
+  .partner-list li { min-height: 64px; font-size: 17px; }
+  .partner-list li:nth-child(n + 3) { border-top: 1px solid var(--line); }
   .partner-list li:nth-child(-n + 2) { border-top: 0; }
   .partner-list li:nth-child(odd) { border-left: 0; }
+  .partner-list li:nth-child(even) { border-left: 1px solid var(--line); }
+  .partner-list li:last-child:nth-child(odd) { grid-column: 1 / -1; }   /* 奇數個時最後一項置中跨兩欄 */
 
   .footer-grid { grid-template-columns: 1fr; gap: 28px; padding-block: 40px 28px; }
   .footer-bottom { flex-direction: column-reverse; align-items: flex-start; gap: 14px; }
