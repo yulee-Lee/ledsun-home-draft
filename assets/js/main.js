@@ -181,6 +181,32 @@
   Array.prototype.forEach.call(carousels, setupCarousel);
 
   /* --------------------------------------------------------------------------
+     需求諮詢表單：初稿為版面示意，送出僅做前端必填檢查並回報狀態
+     正式站改由 WordPress 表單送出，寫入 Google 試算表並寄送通知信
+     -------------------------------------------------------------------------- */
+  var form = document.getElementById('inquiry-form');
+  var hint = document.getElementById('form-hint');
+  if (form && hint) {
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+      var first = null;
+      Array.prototype.forEach.call(form.querySelectorAll('[required]'), function (el) {
+        var empty = !el.value.trim();
+        el.setAttribute('aria-invalid', empty ? 'true' : 'false');
+        if (empty && !first) first = el;
+      });
+      if (first) {
+        hint.textContent = '請填寫標示 * 的必填欄位。';
+        hint.classList.remove('is-sent');
+        first.focus();
+        return;
+      }
+      hint.textContent = '初稿版面示意，表單未實際送出。正式站送出後會寫入 Google 試算表並寄送通知信至 bill@led-suns.com。';
+      hint.classList.add('is-sent');
+    });
+  }
+
+  /* --------------------------------------------------------------------------
      進場淡入：進入視窗即顯示，只觸發一次；無 IntersectionObserver 時直接全部顯示
      -------------------------------------------------------------------------- */
   var revealTargets = document.querySelectorAll('[data-reveal]');
