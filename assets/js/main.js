@@ -195,8 +195,14 @@
         el.setAttribute('aria-invalid', empty ? 'true' : 'false');
         if (empty && !first) first = el;
       });
+      var typeGroup = document.getElementById('f-type-group');
+      if (typeGroup) {
+        var checked = typeGroup.querySelectorAll('input[type="checkbox"]:checked').length;
+        typeGroup.setAttribute('aria-invalid', checked ? 'false' : 'true');
+        if (!checked && !first) first = typeGroup.querySelector('input[type="checkbox"]');
+      }
       if (first) {
-        hint.textContent = '請填寫標示 * 的必填欄位。';
+        hint.textContent = '請填寫標示 * 的必填欄位，需求類型至少勾選一項。';
         hint.classList.remove('is-sent');
         first.focus();
         return;

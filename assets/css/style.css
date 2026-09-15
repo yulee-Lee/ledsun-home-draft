@@ -211,7 +211,6 @@ button { font: inherit; color: inherit; background: none; border: 0; padding: 0;
 .section-head .btn { position: absolute; right: 0; top: 50%; transform: translateY(-50%); }
 
 .grid { display: grid; gap: 24px; }
-.grid-3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
 .grid-4 { grid-template-columns: repeat(4, minmax(0, 1fr)); }
 
 .card { display: flex; flex-direction: column; background: #fff; border: 1px solid var(--line); border-radius: var(--radius); padding: 20px; box-shadow: var(--shadow-sm); transition: box-shadow .3s var(--ease), transform .3s var(--ease), border-color .3s; }
@@ -241,7 +240,8 @@ button { font: inherit; color: inherit; background: none; border: 0; padding: 0;
 .problem-no { flex: 0 0 auto; font-size: 26px; font-weight: 700; letter-spacing: .04em; color: var(--green); line-height: 1; }
 .problem-card p { font-size: 17px; line-height: 1.7; font-weight: 500; color: var(--green-deep); }
 
-/* 三大解決方向 */
+/* 三大解決方向：欄數隨項目數自動調整，未來新增「資料整合」不需改版型 */
+.solution-grid { grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); }
 .solution-card { padding: 0; overflow: hidden; }
 .solution-card .card-media { border-radius: 0; }
 .solution-card .card-body { display: flex; flex-direction: column; flex: 1 1 auto; padding: 22px 24px 24px; }
@@ -256,6 +256,7 @@ button { font: inherit; color: inherit; background: none; border: 0; padding: 0;
 .why-ico-wrap { display: flex; align-items: center; justify-content: center; width: 56px; height: 56px; margin: 0 auto 14px; }
 .why-ico { width: 40px; height: 40px; fill: var(--green-deep); }
 .why-list h3 { font-size: 17px; font-weight: 700; color: var(--green-deep); line-height: 1.5; }
+.why-list p { margin-top: 8px; font-size: 14px; line-height: 1.8; color: var(--ink-2); text-wrap: pretty; }
 
 /* 真實應用案例 */
 .case-card { padding: 0; overflow: hidden; }
@@ -299,6 +300,15 @@ button { font: inherit; color: inherit; background: none; border: 0; padding: 0;
 .field input:focus, .field select:focus, .field textarea:focus { border-color: var(--green-deep); }
 .field [aria-invalid="true"] { border-color: #B4462A; }
 .field select { appearance: none; padding-right: 38px; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 8'%3E%3Cpath d='M1 1.5 6 6.5l5-5' fill='none' stroke='%230B3B2E' stroke-width='1.6' stroke-linecap='round'/%3E%3C/svg%3E"); background-repeat: no-repeat; background-position: right 14px center; background-size: 12px 8px; }
+fieldset.field { min-width: 0; margin: 0; padding: 0; border: 0; gap: 4px; }
+fieldset.field legend { padding: 0; font-size: 14px; font-weight: 500; color: var(--green-deep); }
+.legend-note { margin-left: 4px; font-weight: 400; color: var(--ink-3); }
+.checks { display: flex; flex-wrap: wrap; gap: 0 20px; }
+.check { display: inline-flex; align-items: center; gap: 9px; min-height: 44px; font-size: 15px; cursor: pointer; }
+.check input { width: 19px; height: 19px; margin: 0; accent-color: var(--green-deep); cursor: pointer; }
+fieldset.field[aria-invalid="true"] legend { color: #B4462A; }
+fieldset.field[aria-invalid="true"] .check input { outline: 2px solid #B4462A; outline-offset: 2px; }
+
 .hp { position: absolute; width: 1px; height: 1px; margin: -1px; padding: 0; border: 0; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }   /* 防垃圾用隱藏欄位：仍會被機器人填寫，但不佔版面、不影響捲動範圍 */
 .form-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 14px 18px; margin-top: 4px; }
 .form-hint { flex: 1 1 220px; font-size: 13px; line-height: 1.6; color: var(--ink-3); }
@@ -428,7 +438,7 @@ button { font: inherit; color: inherit; background: none; border: 0; padding: 0;
 @media (min-width: 768px) and (max-width: 1023px) {
   .solution-grid { grid-template-columns: repeat(6, minmax(0, 1fr)); }
   .solution-grid > * { grid-column: span 3; }
-  .solution-grid > :nth-child(3) { grid-column: 2 / span 3; }
+  .solution-grid > :nth-child(3):last-child { grid-column: 2 / span 3; }   /* 僅在剛好三項時置中末項；四項時自動成 2×2 */
 
   .why-list { grid-template-columns: repeat(6, minmax(0, 1fr)); }
   .why-list li { grid-column: span 2; border-top: 1px solid var(--line); }
@@ -479,10 +489,14 @@ button { font: inherit; color: inherit; background: none; border: 0; padding: 0;
   .problem-card p { font-size: 15px; }
 
   .solution-grid { grid-template-columns: 1fr; gap: 16px; }
+  .solution-grid > :nth-child(3):last-child { grid-column: auto; }
   .solution-card .card-body { padding: 18px 20px 20px; }
 
   .why-list { grid-template-columns: 1fr; }
-  .why-list li { display: flex; align-items: center; gap: 16px; text-align: left; padding: 14px 18px; border-left: 0; }
+  .why-list li { display: grid; grid-template-columns: auto 1fr; align-items: start; column-gap: 14px; text-align: left; padding: 16px 18px; border-left: 0; }
+  .why-list li h3, .why-list li p { grid-column: 2; }
+  .why-list li .why-ico-wrap { grid-row: 1 / span 2; align-self: center; }
+  .why-list p { margin-top: 4px; font-size: 13.5px; line-height: 1.75; }
   .why-list li:nth-child(n + 2) { border-top: 1px solid var(--line); }
   .why-list li:first-child { border-top: 0; }
   .why-ico-wrap { width: 44px; height: 44px; margin: 0; flex: 0 0 auto; }
