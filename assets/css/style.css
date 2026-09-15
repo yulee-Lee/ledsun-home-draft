@@ -56,6 +56,9 @@ h1, h2, h3, p { margin: 0; }
 button { font: inherit; color: inherit; background: none; border: 0; padding: 0; cursor: pointer; }
 [inert] { pointer-events: none; }
 
+/* 錨點跳轉時預留 sticky 頁首高度，避免區塊標題被蓋住 */
+section[id], #contact { scroll-margin-top: calc(var(--header-h) + 16px); }
+
 .container { width: 100%; max-width: var(--container); margin-inline: auto; padding-inline: var(--gutter); }
 
 .skip-link {
@@ -272,7 +275,8 @@ button { font: inherit; color: inherit; background: none; border: 0; padding: 0;
 .inquiry-box { display: grid; grid-template-columns: 1fr 1.05fr; border-radius: 16px; overflow: hidden; box-shadow: var(--shadow); }
 .inquiry-intro { padding: 52px 48px; background: var(--green-deep); color: #fff; }
 .inquiry-intro h2 { font-size: 34px; font-weight: 700; color: var(--accent); letter-spacing: .06em; }
-.inquiry-intro .lead { margin-top: 14px; font-size: 16px; line-height: 1.9; color: rgba(255, 255, 255, .88); }
+.inquiry-intro .lead-q { margin-top: 16px; font-size: 21px; font-weight: 700; line-height: 1.6; color: #fff; }
+.inquiry-intro .lead { margin-top: 10px; font-size: 16px; line-height: 1.9; color: rgba(255, 255, 255, .88); }
 .inquiry-flow { margin-top: 26px; display: grid; gap: 14px; }
 .inquiry-flow li { display: flex; align-items: flex-start; gap: 12px; font-size: 15px; line-height: 1.7; }
 .step-no {
@@ -521,6 +525,7 @@ fieldset.field[aria-invalid="true"] .check input { outline: 2px solid #B4462A; o
   .section.inquiry { padding-block: 12px 48px; }
   .inquiry-intro { padding: 32px 22px; }
   .inquiry-intro h2 { font-size: 26px; }
+  .inquiry-intro .lead-q { font-size: 18px; }
   .inquiry-intro .lead { font-size: 15px; }
   .inquiry-form { grid-template-columns: 1fr; padding: 28px 22px 26px; }
   .form-actions .btn { width: 100%; }
